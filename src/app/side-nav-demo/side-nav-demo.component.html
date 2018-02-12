@@ -1,0 +1,15 @@
+<mat-card class="demo-panel">
+  <mat-card-header>
+    <mat-card-title><h1>Angular Material SideNav Demo</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav class="example-sidenav" mode="push">
+        sidenav content goes here!
+      </mat-sidenav>
+      <div class="example-sidenav-content">
+        <button type="button" (click)="sidenav.open()">Open Sidenav</button>
+      </div>
+    </mat-sidenav-container>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,48 @@
+<form action="formwidth" (ngSubmit) ="onSubmit()" #myFrom >
+  <table class="fullwidth" cellcollapsing ="0">
+    <tr>
+      <td>
+        <mat-input-container class="fullwidth">
+        <input type="text" mdInput placeHolder ="First Name Please" id="firstName" [(ngModel)] ="address.firstName" name="firstName">
+        </mat-input-container>
+      </td>
+      <td>
+        <mat-input-container class="fullwidth">
+          <input type="text" mdInput placeHolder ="Last Name Please" id="lastName" [(ngModel)] ="address.lastName" name="lastName">
+        </mat-input-container>
+      </td>
+    </tr>
+
+  </table>
+  <p>
+    <mat-input-container class ="fullwidth">
+      <textarea mdInput placeholder="address please" id="address" [(ngModel)] ="address.address" name ="address"></textarea>
+    </mat-input-container>
+  </p>
+  <table class="fullwidth" cellcollapsing="0">
+    <tr>
+      <td>
+        <mat-input-container class="fullwidth">
+          <input type="text" mdInput placeHolder ="city Please" id="city" [(ngModel)] ="address.city" name="city">
+        </mat-input-container>
+      </td>
+      <td>
+        <mat-input-container class="fullwidth">
+          <input type="text" mdInput placeHolder ="state Please" id="state" [(ngModel)] ="address.state" name="state">
+        </mat-input-container>
+
+      </td>
+      <td>
+        <mat-input-container class="fullwidth">
+          <input type="text" mdInput maxlength ="5" placeHolder ="Postal Code Please" id="postalCode" [(ngModel)] ="address.postalCode" name="postalCode">
+        <mat-hint align ="end">
+          {{postalCode.value.length}}/5
+        </mat-hint>
+        </mat-input-container>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <button type="submit" md-raised-button>Submit</button>
+  </p>
+</form>
